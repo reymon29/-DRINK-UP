@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-  has_one :post
+ belongs_to :post
 end

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
+
   def new
     @post = Post.new
   end
@@ -22,7 +23,7 @@ class PostsController < ApplicationController
 
   private
 
-  def set_restaurant
+  def set_post
     @post = Post.find(params[:id])
   end
 end
