@@ -19,6 +19,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
+   if @post.photo? @post.photo.remove
+    if @post.destroy
+      redirect_to posts_path
+      flash[:notice] = "Post has been removed competely"
+    end
   end
 
   private
